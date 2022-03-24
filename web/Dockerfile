@@ -19,6 +19,9 @@ RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
     && php -r "unlink('composer-setup.php');" \
     && mv composer.phar /usr/local/bin/composer
 
+#Laravelプロジェクトの作成
+RUN composer create-project laravel/laravel --prefer-dist laravel_sample
+
+# -- memo -- #
 # RUN命令はDockerfileからイメージを作成するときに実行される
 # CMD命令はイメージからコンテナが作成される時に実行される
-CMD ["composer", "create-project", "laravel/laravel", "--prefer-dist", "laravel_sample"]
