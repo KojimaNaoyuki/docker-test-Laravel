@@ -19,5 +19,7 @@ services:
     ports:
       - 3306:3306
     environment:
+      MYSQL_ROOT_PASSWORD: rootps
       MYSQL_DATABASE: LaravelDB
-      MYSQL_ROOT_PASSWORD: password
+      MYSQL_USER: develop
+      MYSQL_PASSWORD: developps
